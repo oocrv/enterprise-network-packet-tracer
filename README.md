@@ -81,6 +81,17 @@ Port security can be documented here if enabled on the switch access ports. Incl
 - `screenshots/` — evidence screenshots referenced throughout this README.
 - `Enterprise_Network_Project.pkt` — the Cisco Packet Tracer project file.
 
+## Download and Run the Packet Tracer Lab
+
+**Main lab file:** `Enterprise_Network_Project.pkt`
+
+1. Open the file `Enterprise_Network_Project.pkt` in Cisco Packet Tracer.
+2. If the file is not listed in the repository yet, upload your saved `.pkt` file to the repository's root folder (the same level as this README).
+3. In GitHub, choose **Add file → Upload files**, select the `.pkt` file, and commit the upload.
+4. Reopen this README and click the lab filename to download/open it.
+
+> Note: The `.pkt` file must be uploaded from your computer. This README section creates a clear place and instructions for it; it does not recreate or restore a deleted Packet Tracer file.
+
 ## How to Open the Project
 
 1. Download or clone this repository.
