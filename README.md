@@ -2,7 +2,7 @@
 
 A small enterprise network built in **Cisco Packet Tracer** using VLAN segmentation, router-on-a-stick inter-VLAN routing, DHCP, and an internal DNS/HTTP server.
 
-> **Project status:** Packet Tracer project, configuration notes, and evidence screenshots are included in this repository.
+> **Project status:** The Packet Tracer project file, configuration notes, and evidence screenshots are included in this repository. Use the checklist below to verify the lab in Packet Tracer before treating every feature as confirmed.
 
 ## Project Objectives
 
@@ -42,63 +42,55 @@ The internal server uses the static address `192.168.50.10/24`, with default gat
 ## Main Features
 
 ### VLANs and Trunking
-Separate VLANs are used for HR, Finance, IT, Operations, and Servers. Trunk links carry the required VLAN traffic between network devices.
+Separate VLANs are intended for HR, Finance, IT, Operations, and Servers. Trunk links should carry the required VLAN traffic between network devices.
 
 ### Inter-VLAN Routing
-Router-on-a-stick is configured on router `R1` using subinterfaces on `GigabitEthernet0/0`, with 802.1Q encapsulation and a gateway address for each VLAN.
+The design uses router-on-a-stick subinterfaces on `GigabitEthernet0/0`, with 802.1Q encapsulation and a gateway address for each VLAN. Confirm the actual running configuration in Packet Tracer.
 
 ### DHCP
-DHCP pools provide IPv4 configuration to clients in each VLAN. Addresses in the first part of each subnet are excluded from dynamic allocation, and the DNS server option points to `192.168.50.10`.
+The design includes DHCP addressing for client VLANs. Addresses in the first part of each subnet are intended to be excluded from dynamic allocation, and the DNS server option should point to `192.168.50.10`.
 
 ![DHCP configuration](screenshots/05-dhcp.png)
 
 ### Internal DNS and HTTP
-The server is configured with DNS and HTTP services. The DNS A record maps `intranet.company.local` to `192.168.50.10`.
+The intended server configuration uses DNS and HTTP services. The DNS A record should map `intranet.company.local` to `192.168.50.10`.
 
 ![DNS and HTTP server settings](screenshots/06-web-dns.png)
 ![Connectivity and name-resolution test](screenshots/07-ping.png)
 
 ### Port Security
-Port security can be documented here if enabled on the switch access ports. Include the relevant configuration and verification output only after confirming it is configured in your Packet Tracer file.
+Port security should be considered enabled only if the configuration in the Packet Tracer file confirms it. Check the switch configuration and verification output.
 
 ![Port security verification](screenshots/08-port-security.png)
 
 ## Verification Checklist
 
-- [ ] VLANs are present on the switches.
-- [ ] Trunk links carry the required VLANs.
-- [ ] Router subinterfaces are up/up.
+Run these checks in Packet Tracer and tick each item only after it passes:
+
+- [ ] VLANs are present on both switches (`show vlan brief`).
+- [ ] Trunk links carry the required VLANs (`show interfaces trunk`).
+- [ ] Router subinterfaces are operational (`show ip interface brief`).
 - [ ] PCs receive the expected IP address, subnet mask, gateway, and DNS settings.
 - [ ] Clients can reach their default gateway.
 - [ ] Inter-VLAN connectivity works where intended.
 - [ ] `intranet.company.local` resolves to `192.168.50.10`.
 - [ ] The internal web page opens from a client PC.
+- [ ] Port security is configured and verified on the intended access ports, if included in the lab.
 
 ## Repository Contents
 
-- `README.md` — project overview and screenshot locations.
+- `README.md` — project overview and verification checklist.
 - `Network-Configuration.md` — configuration notes and useful verification commands.
 - `screenshots/` — evidence screenshots referenced throughout this README.
-- `Enterprise_Network_Project.pkt` — the Cisco Packet Tracer project file.
+- [`Enterprise_Network_Project.pkt`](Enterprise_Network_Project.pkt) — downloadable Cisco Packet Tracer project file.
 
 ## Download and Run the Packet Tracer Lab
 
-**Main lab file:** `Enterprise_Network_Project.pkt`
-
-1. Open the file `Enterprise_Network_Project.pkt` in Cisco Packet Tracer.
-2. If the file is not listed in the repository yet, upload your saved `.pkt` file to the repository's root folder (the same level as this README).
-3. In GitHub, choose **Add file → Upload files**, select the `.pkt` file, and commit the upload.
-4. Reopen this README and click the lab filename to download/open it.
-
-> Note: The `.pkt` file must be uploaded from your computer. This README section creates a clear place and instructions for it; it does not recreate or restore a deleted Packet Tracer file.
-
-## How to Open the Project
-
-1. Download or clone this repository.
-2. Open `Enterprise_Network_Project.pkt` in Cisco Packet Tracer.
+1. Download [`Enterprise_Network_Project.pkt`](Enterprise_Network_Project.pkt) from this repository.
+2. Open it in Cisco Packet Tracer.
 3. Wait for the topology to load, then inspect the device configurations.
-4. Use the verification checklist above to test the network.
+4. Run the verification checklist above and save any changes you make.
 
 ## Notes
 
-This repository documents a learning/lab project. Verify the actual Packet Tracer file and device configurations before using the design in a production environment.
+This repository documents a learning/lab project. Screenshots are supporting evidence, but they do not by themselves prove that the current `.pkt` file passes every test. Verify the actual device configurations and connectivity before using the design in a production environment.
