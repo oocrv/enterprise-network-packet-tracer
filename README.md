@@ -21,7 +21,7 @@ A small enterprise network built in **Cisco Packet Tracer** using VLAN segmentat
 - 8 × PCs
 - 1 × Server-PT
 
-![Complete network topology](screenshots/01-topology.png.png)
+![Complete network topology](screenshots/01-topology.png)
 
 ## VLAN and IP Addressing Plan
 
@@ -35,9 +35,9 @@ A small enterprise network built in **Cisco Packet Tracer** using VLAN segmentat
 
 The internal server uses the static address `192.168.50.10/24`, with default gateway `192.168.50.1` and DNS server `192.168.50.10`.
 
-![VLAN verification](screenshots/02-vlans.png.png)
-![Trunk verification](screenshots/03-trunks.png.png)
-![Router subinterfaces](screenshots/04-router.png.png)
+![VLAN verification](screenshots/02-vlans.png)
+![Trunk verification](screenshots/03-trunks.png)
+![Router subinterfaces](screenshots/04-router.png)
 
 ## Main Features
 
@@ -50,18 +50,18 @@ Router-on-a-stick is configured on router `R1` using subinterfaces on `GigabitEt
 ### DHCP
 DHCP pools provide IPv4 configuration to clients in each VLAN. Addresses in the first part of each subnet are excluded from dynamic allocation, and the DNS server option points to `192.168.50.10`.
 
-![DHCP configuration](screenshots/05-dhcp.png.png)
+![DHCP configuration](screenshots/05-dhcp.png)
 
 ### Internal DNS and HTTP
 The server is configured with DNS and HTTP services. The DNS A record maps `intranet.company.local` to `192.168.50.10`.
 
-![DNS and HTTP server settings](screenshots/06-web-dns.png.png)
-![Connectivity and name-resolution test](screenshots/07-ping.png.png)
+![DNS and HTTP server settings](screenshots/06-web-dns.png)
+![Connectivity and name-resolution test](screenshots/07-ping.png)
 
 ### Port Security
 Port security can be documented here if enabled on the switch access ports. Include the relevant configuration and verification output only after confirming it is configured in your Packet Tracer file.
 
-![Port security verification](screenshots/08-port-security.png.png)
+![Port security verification](screenshots/08-port-security.png)
 
 ## Verification Checklist
 
@@ -78,7 +78,7 @@ Port security can be documented here if enabled on the switch access ports. Incl
 
 - `README.md` — project overview and screenshot locations.
 - `Network-Configuration.md` — configuration notes and useful verification commands.
-- `screenshots/` — add the evidence screenshots listed above.
+- `screenshots/` — evidence screenshots referenced throughout this README.
 - `Enterprise_Network_Project.pkt` — the Cisco Packet Tracer project file.
 
 ## How to Open the Project
