@@ -158,9 +158,9 @@ interface range fastEthernet 0/2-5
 
 Do not apply this blindly to trunk/uplink ports. Verify the actual connected interfaces and check that the switch model in Packet Tracer supports the commands.
 
-## 8. Suggested Evidence Screenshots
+## 8. Evidence Screenshots
 
-Save screenshots using these exact names so they can be linked from the README:
+The repository's `screenshots/` folder contains the following evidence images. Keep these filenames consistent with the links in `README.md`:
 
 1. `screenshots/01-topology.png` — entire topology with device names and links.
 2. `screenshots/02-vlans.png` — `show vlan brief`.
@@ -168,7 +168,7 @@ Save screenshots using these exact names so they can be linked from the README:
 4. `screenshots/04-router.png` — router subinterfaces / `show ip interface brief`.
 5. `screenshots/05-dhcp.png` — DHCP configuration or client addressing.
 6. `screenshots/06-web-dns.png` — DNS record and HTTP service on the server.
-7. `screenshots/07-ping.png` — successful connectivity and name-resolution tests.
+7. `screenshots/07-ping.png` — connectivity and name-resolution tests.
 8. `screenshots/08-port-security.png` — port-security verification, if configured.
 
-The evidence screenshots are present in `screenshots/`. Their current filenames end in `.png.png`; the README links use those exact filenames so the images display. You can optionally rename them to the cleaner `.png` names listed above and update the README links.
+Before presenting screenshots as proof of successful operation, verify that each screenshot shows the expected output and matches the current `.pkt` file.
