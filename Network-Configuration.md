@@ -171,4 +171,4 @@ Save screenshots using these exact names so they can be linked from the README:
 7. `screenshots/07-ping.png` — successful connectivity and name-resolution tests.
 8. `screenshots/08-port-security.png` — port-security verification, if configured.
 
-Add the screenshots yourself; no screenshot files have been uploaded by this documentation commit.
+The evidence screenshots are present in `screenshots/`. Their current filenames end in `.png.png`; the README links use those exact filenames so the images display. You can optionally rename them to the cleaner `.png` names listed above and update the README links.
